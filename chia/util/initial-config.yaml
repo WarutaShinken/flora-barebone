@@ -204,7 +204,7 @@ harvester:
     crt: "config/ssl/ca/private_ca.crt"
     key: "config/ssl/ca/private_ca.key"
 
-flora_ssl_ca:
+  flora_ssl_ca:
     crt: "config/ssl/ca/flora_ca.crt"
     key: "config/ssl/ca/flora_ca.key"
 
