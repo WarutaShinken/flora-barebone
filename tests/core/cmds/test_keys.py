@@ -147,8 +147,8 @@ class TestKeysCommands:
         address = address_matches[0]
 
         config: Dict = load_config(tmp_path, "config.yaml")
-        assert config["farmer"]["xch_target_address"] == address
-        assert config["pool"]["xch_target_address"] == address
+        assert config["farmer"]["xfl_target_address"] == address
+        assert config["pool"]["xfl_target_address"] == address
 
     def test_generate_with_existing_config(self, tmp_path, empty_keyring):
         """
@@ -183,8 +183,8 @@ class TestKeysCommands:
         address = address_matches[0]
 
         existing_config: Dict = load_config(tmp_path, "config.yaml")
-        assert existing_config["farmer"]["xch_target_address"] == address
-        assert existing_config["pool"]["xch_target_address"] == address
+        assert existing_config["farmer"]["xfl_target_address"] == address
+        assert existing_config["pool"]["xfl_target_address"] == address
 
         # Generate the second key
         runner = CliRunner()
@@ -197,8 +197,8 @@ class TestKeysCommands:
 
         # Verify that the config's xch_target_address entries have not changed
         config: Dict = load_config(tmp_path, "config.yaml")
-        assert config["farmer"]["xch_target_address"] == existing_config["farmer"]["xch_target_address"]
-        assert config["pool"]["xch_target_address"] == existing_config["pool"]["xch_target_address"]
+        assert config["farmer"]["xfl_target_address"] == existing_config["farmer"]["xfl_target_address"]
+        assert config["pool"]["xfl_target_address"] == existing_config["pool"]["xfl_target_address"]
 
     def test_show(self, keyring_with_one_key):
         """

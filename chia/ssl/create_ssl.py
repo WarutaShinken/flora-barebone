@@ -116,7 +116,7 @@ def make_ca_cert(cert_path: Path, key_path: Path):
 
 
 def main():
-    return make_ca_cert(Path("./chia_ca.crt"), Path("./chia_ca.key"))
+    return make_ca_cert(Path("./flora_ca.crt"), Path("./flora_ca.key"))
 
 
 if __name__ == "__main__":
